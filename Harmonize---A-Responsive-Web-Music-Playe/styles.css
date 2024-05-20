@@ -1,0 +1,58 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(119,173,157,1) 27%, rgba(218,249,234,1) 75%);
+  }
+  #card {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    #display {  
+      width: 60%;
+      border-radius: 20px 0 0 20px;
+      background: rgba(255,255,255,.5);
+      backdrop-filter: blur(30px) hue-rotate(20deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      > * {
+        text-align: center;
+      }
+      #art {
+        height: 200px;
+        margin: 0 auto;
+      }
+    }
+    #list {
+      width: 40%;
+      border-radius: 0 20px 20px 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      .item {
+        padding: 0 1em;
+        background: white;
+        transition: all .3s ease;
+        &:first-of-type {
+          border-radius: 0 20px 0 0;
+        }
+        &:last-of-type {
+          border-radius: 0 0 20px 0;
+        }
+        &.is-active {
+          background: rgba(255,255,255,.5);
+          backdrop-filter: blur(30px) hue-rotate(20deg);
+          transition: all .3s ease;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
